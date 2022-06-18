@@ -14,10 +14,12 @@
     <div id="app">
         <h1>Old vs New Generation Cars</h1>
         <div class="images">
-            <img class="corvette" alt="Corvette" :src="corvetteHover" @mouseover="corvettehover = true" @mouseleave="corvettehover = false"/>
-            <img class="mustang" alt="Mustang" :src="mustangHover" @mouseover="mustanghover = true" @mouseleave="mustanghover = false"/>
-            <img class="bmw" alt="BMW 3 Series" :src="bmwHover" @mouseover="bmwhover = true" @mouseleave="bmwhover = false"/>
-            <img class="porsche" alt="Porsche 911" :src="porscheHover" @mouseover="porschehover = true" @mouseleave="porschehover = false"/>
+            <div class="grid">
+                <img width="500" class="corvette" alt="Corvette" :src="corvetteHover" @mouseover="corvettehover = true" @mouseleave="corvettehover = false"/>
+                <img width="500" class="mustang" alt="Mustang" :src="mustangHover" @mouseover="mustanghover = true" @mouseleave="mustanghover = false"/>
+                <img width="500" class="bmw" alt="BMW 3 Series" :src="bmwHover" @mouseover="bmwhover = true" @mouseleave="bmwhover = false"/>
+                <img width="500" class="porsche" alt="Porsche 911" :src="porscheHover" @mouseover="porschehover = true" @mouseleave="porschehover = false"/>
+            </div>
         </div>
     
           
@@ -48,30 +50,30 @@
             computed: {
                 corvetteHover() {
                     if (this.corvettehover == true) {
-                        return this.newCorvette
-                    } else {
                         return this.oldCorvette
+                    } else {
+                        return this.newCorvette
                     }
                 },
                 mustangHover() {
                     if (this.mustanghover == true) {
-                        return this.newMustang
-                    } else {
                         return this.oldMustang
+                    } else {
+                        return this.newMustang
                     }
                 },
                 bmwHover() {
                     if (this.bmwhover == true) {
-                        return this.newBMW
-                    } else {
                         return this.oldBMW
+                    } else {
+                        return this.newBMW
                     }
                 },
                 porscheHover() {
                     if (this.porschehover == true) {
-                        return this.newPorsche
-                    } else {
                         return this.oldPorsche
+                    } else {
+                        return this.newPorsche
                     }
                 }
          }
