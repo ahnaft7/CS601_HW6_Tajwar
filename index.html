@@ -12,10 +12,14 @@
     <script src="https://unpkg.com/vue@3"></script>
 
     <div id="app">
-        <img alt="Corvette" :src="oldCorvette" @mouseover="oldCorvette = newCorvette"/>
-        <img alt="Mustang" :src="oldMustang" @mouseover="oldMustang = newMustang"/>
-        <img alt="BMW 3 Series" :src="oldBMW" @mouseover="oldBMW = newBMW"/>
-        <img alt="Porsche 911" :src="oldPorsche" @mouseover="oldPorsche = newPorsche"/>
+        <h1>Old vs New Generation Cars</h1>
+        <div class="images">
+            <img class="corvette" alt="Corvette" :src="corvetteHover" @mouseover="corvettehover = true" @mouseleave="corvettehover = false"/>
+            <img class="mustang" alt="Mustang" :src="mustangHover" @mouseover="mustanghover = true" @mouseleave="mustanghover = false"/>
+            <img class="bmw" alt="BMW 3 Series" :src="bmwHover" @mouseover="bmwhover = true" @mouseleave="bmwhover = false"/>
+            <img class="porsche" alt="Porsche 911" :src="porscheHover" @mouseover="porschehover = true" @mouseleave="porschehover = false"/>
+        </div>
+    
           
 
     </div>
@@ -33,10 +37,44 @@
                     oldBMW: "./images/old_bmw.jpg",
                     newBMW: "./images/new_bmw.jpg",
                     oldPorsche: "./images/old_porsche.jpg",
-                    newPorsche: "./images/new_porsche.jpg"
+                    newPorsche: "./images/new_porsche.jpg",
+                    corvettehover: false,
+                    mustanghover: false,
+                    bmwhover: false,
+                    porschehover: false
                 }
 
-            }
+            },
+            computed: {
+                corvetteHover() {
+                    if (this.corvettehover == true) {
+                        return this.newCorvette
+                    } else {
+                        return this.oldCorvette
+                    }
+                },
+                mustangHover() {
+                    if (this.mustanghover == true) {
+                        return this.newMustang
+                    } else {
+                        return this.oldMustang
+                    }
+                },
+                bmwHover() {
+                    if (this.bmwhover == true) {
+                        return this.newBMW
+                    } else {
+                        return this.oldBMW
+                    }
+                },
+                porscheHover() {
+                    if (this.porschehover == true) {
+                        return this.newPorsche
+                    } else {
+                        return this.oldPorsche
+                    }
+                }
+         }
         }).mount('#app')
     </script>
 </body>
