@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old and New</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">
+        <img alt="Corvette" :src="oldCorvette" @mouseover="oldCorvette = newCorvette"/>
+        <img alt="Mustang" :src="oldMustang" @mouseover="oldMustang = newMustang"/>
+        <img alt="BMW 3 Series" :src="oldBMW" @mouseover="oldBMW = newBMW"/>
+        <img alt="Porsche 911" :src="oldPorsche" @mouseover="oldPorsche = newPorsche"/>
+          
+
+    </div>
+
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    oldCorvette: "./images/old_corvette.jpg",
+                    newCorvette: "./images/new_corvette.jpg",
+                    oldMustang: "./images/old_mustang.jpg",
+                    newMustang: "./images/new_mustang.jpg",
+                    oldBMW: "./images/old_bmw.jpg",
+                    newBMW: "./images/new_bmw.jpg",
+                    oldPorsche: "./images/old_porsche.jpg",
+                    newPorsche: "./images/new_porsche.jpg"
+                }
+
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>
