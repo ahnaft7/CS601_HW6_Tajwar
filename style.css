@@ -15,7 +15,7 @@ body {
 }
 
 div.container{
-    margin: auto;
+    margin: 10px;
     border: solid black;
     width: auto;
     
