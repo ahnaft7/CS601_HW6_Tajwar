@@ -31,7 +31,6 @@ div.gallery {
     display: block;
     margin: 5px;
     border: 1px solid rgb(133, 133, 133);
-    float: center;
     width: auto;
     max-width: 600px;
 }
