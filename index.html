@@ -11,29 +11,31 @@
 
 <body>
     <script src="https://unpkg.com/vue@3"></script>
-    <div class="container" id="app">
-        <h1>Old vs New Generation Cars</h1>
-        <div class="images">
-            <div class="gallery">
-                <img width="600" height="400" class="corvette" alt="Corvette" :src="corvetteHover" @mouseover="corvettehover = true" @mouseleave="corvettehover = false"/>
-                <div class="desc">Chevrolet Corvette</div>
-            </div>
-            <div class="gallery">
-                <img width="600" height="400" class="mustang" alt="Mustang" :src="mustangHover" @mouseover="mustanghover = true" @mouseleave="mustanghover = false"/>
-                <div class="desc">Ford Mustang</div>
-            </div>
-            <div class="gallery">
-                <img width="600" height="400" class="bmw" alt="BMW 3 Series" :src="bmwHover" @mouseover="bmwhover = true" @mouseleave="bmwhover = false"/>
-                <div class="desc">BMW 3 Series</div>
-            </div>
-            <div class="gallery">
-                <img width="600" height="400" class="porsche" alt="Porsche 911" :src="porscheHover" @mouseover="porschehover = true" @mouseleave="porschehover = false"/>
-                <div class="desc">Porsche 911</div>
+    <h1>Old vs New Generation Cars</h1>
+    <div id="app">
+        <div class="container">
+            <div class="images">
+                <div class="gallery">
+                    <img width="600" height="400" class="corvette" alt="Corvette" :src="corvetteHover" @mouseover="corvettehover = true" @mouseleave="corvettehover = false"/>
+                    <div class="desc">Chevrolet Corvette</div>
+                </div>
+                <div class="gallery">
+                    <img width="600" height="400" class="mustang" alt="Mustang" :src="mustangHover" @mouseover="mustanghover = true" @mouseleave="mustanghover = false"/>
+                    <div class="desc">Ford Mustang</div>
+                </div>
+                <div class="gallery">
+                    <img width="600" height="400" class="bmw" alt="BMW 3 Series" :src="bmwHover" @mouseover="bmwhover = true" @mouseleave="bmwhover = false"/>
+                    <div class="desc">BMW 3 Series</div>
+                </div>
+                <div class="gallery">
+                    <img width="600" height="400" class="porsche" alt="Porsche 911" :src="porscheHover" @mouseover="porschehover = true" @mouseleave="porschehover = false"/>
+                    <div class="desc">Porsche 911</div>
+                </div>
             </div>
         </div>
-    
-          
-
+        <div class="btnbox">
+            <button v-on:click="goToStudentLink">Register Now</button>
+        </div>
     </div>
 
     <script>
@@ -86,7 +88,13 @@
                         return this.newPorsche
                     }
                 }
-         }
+         },
+        methods: {
+        goToStudentLink: function() {
+            alert('You will be redirected to Student Link.')
+            window.location.href = 'https://www.bu.edu/studentlink'
+        }
+     }
         }).mount('#app')
     </script>
 </body>

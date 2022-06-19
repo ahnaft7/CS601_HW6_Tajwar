@@ -16,31 +16,65 @@ body {
 
 div.container{
     margin: 10px;
-    border: solid black;
     width: auto;
-    
 }
 
 h1 {
     text-align: center;
     padding: 50px;
     font-size: 1.5rem;
+    margin: 10px;
+    border: solid black;
 }
 
-
 div.gallery {
+    display: block;
     margin: 5px;
     border: 1px solid rgb(133, 133, 133);
-    float: left;
-    width: 400px;
-  }
+    float: center;
+    width: auto;
+    max-width: 600px;
+}
 
 div.gallery img {
     width: 100%;
     height: auto;
-  }
+}
 
-  div.desc {
+div.desc {
     padding: 15px;
     text-align: center;
-  }
+}
+
+div.btnbox {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    line-height: 15;
+}
+
+button {
+    width: 200px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000000;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+
+button:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #ffffff;
+    transform: translateY(-7px);
+    animation: ani1 0.4s ease-in-out infinite alternate;
+}
